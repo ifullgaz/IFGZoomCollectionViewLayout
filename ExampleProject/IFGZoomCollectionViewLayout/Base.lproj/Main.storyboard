@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="QLb-sl-bxX">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="xCA-UV-JLW">
+            <objects>
+                <viewController id="QLb-sl-bxX" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cPL-6S-l3S"/>
+                        <viewControllerLayoutGuide type="bottom" id="vT0-Rf-Min"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tMp-IY-9zJ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="KJo-BJ-JUU">
+                                <rect key="frame" x="0.0" y="415" width="600" height="125"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.10000000000000001" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="125" id="Eh4-Vm-nXc"/>
+                                </constraints>
+                                <collectionViewLayout key="collectionViewLayout" id="EfV-hv-rlb" customClass="IFGZoomCollectionViewLayout"/>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="UgH-JN-8qt">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="QLb-sl-bxX" id="aLc-Ca-DxF"/>
+                                    <outlet property="delegate" destination="QLb-sl-bxX" id="Azk-Ss-9ob"/>
+                                </connections>
+                            </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EjV-Zg-Dlz">
+                                <rect key="frame" x="16" y="120" width="568" height="45"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="36"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.24175131940545047" green="0.35245460856805844" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="EjV-Zg-Dlz" firstAttribute="top" secondItem="cPL-6S-l3S" secondAttribute="bottom" constant="100" id="2hg-Ig-vey"/>
+                            <constraint firstItem="vT0-Rf-Min" firstAttribute="top" secondItem="KJo-BJ-JUU" secondAttribute="bottom" constant="60" id="Pxs-yP-LgU"/>
+                            <constraint firstItem="KJo-BJ-JUU" firstAttribute="leading" secondItem="tMp-IY-9zJ" secondAttribute="leading" id="Yot-ik-36S"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="EjV-Zg-Dlz" secondAttribute="trailing" id="erM-fq-ptv"/>
+                            <constraint firstItem="EjV-Zg-Dlz" firstAttribute="leading" secondItem="tMp-IY-9zJ" secondAttribute="leadingMargin" id="i2k-pD-4k6"/>
+                            <constraint firstAttribute="trailing" secondItem="KJo-BJ-JUU" secondAttribute="trailing" id="uKS-Ix-9wR"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="KJo-BJ-JUU" id="poW-zx-y5e"/>
+                        <outlet property="label" destination="EjV-Zg-Dlz" id="VmE-z2-sOt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Du3-Pp-bzs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="526" y="515"/>
+        </scene>
+    </scenes>
+</document>
